@@ -174,12 +174,16 @@ endfunc
 " auto toggle the menu
 augroup autoload_cscope
  au!
- au BufEnter *.[chly]  call <SID>Cycle_csdb() | call <SID>Cycle_macros_menus()
- au BufEnter *.cc      call <SID>Cycle_csdb() | call <SID>Cycle_macros_menus()
- au BufEnter *.cpp     call <SID>Cycle_csdb() | call <SID>Cycle_macros_menus()
- au BufUnload *.[chly] call <SID>Unload_csdb() | call <SID>Cycle_macros_menus()
- au BufUnload *.cc     call <SID>Unload_csdb() | call <SID>Cycle_macros_menus()
- au BufUnload *.cpp    call <SID>Unload_csdb() | call <SID>Cycle_macros_menus()
+ au BufEnter *.[chly]   call <SID>Cycle_csdb()  | call <SID>Cycle_macros_menus()
+ au BufEnter *.cc       call <SID>Cycle_csdb()  | call <SID>Cycle_macros_menus()
+ au BufEnter *.cpp      call <SID>Cycle_csdb()  | call <SID>Cycle_macros_menus()
+ au BufEnter *.py       call <SID>Cycle_csdb()  | call <SID>Cycle_macros_menus()
+ au BufEnter *.py[dix]  call <SID>Cycle_csdb()  | call <SID>Cycle_macros_menus()
+ au BufUnload *.[chly]  call <SID>Unload_csdb() | call <SID>Cycle_macros_menus()
+ au BufUnload *.cc      call <SID>Unload_csdb() | call <SID>Cycle_macros_menus()
+ au BufUnload *.cpp     call <SID>Unload_csdb() | call <SID>Cycle_macros_menus()
+ au BufUnload *.py      call <SID>Unload_csdb() | call <SID>Cycle_macros_menus()
+ au BufUnload *.py[dix] call <SID>Unload_csdb() | call <SID>Cycle_macros_menus()
 augroup END
 
 let &cpo = s:save_cpo
